@@ -11,7 +11,7 @@ public class DriveTrainSubsystem extends SubsystemBase {
     private final CANSparkMax rightSideMotor = new CANSparkMax(2, CANSparkLowLevel.MotorType.kBrushless);
     private final RelativeEncoder leftEncoder = leftSideMotor.getEncoder();
     private final RelativeEncoder rightEncoder = rightSideMotor.getEncoder();
-    private double conversionFactor = 8845.939;
+    private double conversionFactor = 1.048;
 
 
 
@@ -31,4 +31,11 @@ public class DriveTrainSubsystem extends SubsystemBase {
     public RelativeEncoder getRightEncoder() {
         return rightEncoder;
     }
+//    public void setLeftEncoderPosition(double conversionFactor){
+//        this.leftEncoder.setPosition(leftEncoder.getPosition()+conversionFactor);
+//    }
+//    public void setRightEncoderPosition(double conversionFactor){
+//        this.rightEncoder.setPosition(rightEncoder.getPosition()+conversionFactor);
+//    }
+
 }

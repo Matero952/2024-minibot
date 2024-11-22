@@ -18,11 +18,12 @@ public class DriveCommand extends Command {
         this.speedScalar = speedScalar;
         addRequirements(driveTrainSubsystem);
     }
+    //4.481 Start position. End position 3.433. 1.048 position change per meter.
 
     @Override
     public void execute() {
         leftVoltage = (controller.getLeftY() * 2) - (controller.getLeftX());
-        rightVoltage = (controller.getLeftY() * -2) - (controller.getLeftX());
+        rightVoltage = (controller.getLeftY() * 2) - (controller.getLeftX());
         this.driveTrainSubsystem.setLeftSideMotorVoltage(leftVoltage * speedScalar);
         this.driveTrainSubsystem.setRightSideMotorVoltage(rightVoltage * speedScalar);
         table.setDouble("Position", driveTrainSubsystem.getLeftEncoder().getPosition());

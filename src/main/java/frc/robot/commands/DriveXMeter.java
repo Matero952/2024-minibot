@@ -16,6 +16,7 @@ public class DriveXMeter extends Command {
    public DriveXMeter(DriveTrainSubsystem driveTrainSubsystem) {
       this.driveTrainSubsystem = driveTrainSubsystem;
 
+
       addRequirements(driveTrainSubsystem);
 
 
@@ -25,12 +26,11 @@ public class DriveXMeter extends Command {
    @Override
    public void execute() {
 
+
    }
 
+   @Override
+   public void initialize() {
 
-
-
-
-
-
+   }
 }
